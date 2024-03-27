@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour
     void Awake()
     {
         Instance = this;
-        InputController = GetComponent<InputController>();
+        InputController = GetComponentInChildren<InputController>();
     }
 
     // Update is called once per frame
