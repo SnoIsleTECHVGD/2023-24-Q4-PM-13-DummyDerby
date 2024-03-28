@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Car : MonoBehaviour
+public class CarController : MonoBehaviour
 {
     public Transform centerOfMass;
     public float motorTorque = 100f;
