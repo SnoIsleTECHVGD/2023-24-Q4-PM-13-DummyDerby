@@ -24,8 +24,8 @@ public class CarController : MonoBehaviour
 
      void Update()
     {
-        Steer = GameManager.Instance.InputController.SteerInput;
-        Throttle = GameManager.Instance.InputController.ThrottleInput;
+      //  Steer = GameManager.Instance.InputController.SteerInput;
+      //  Throttle = GameManager.Instance.InputController.ThrottleInput;
 
         foreach (var wheel in wheels)
         {

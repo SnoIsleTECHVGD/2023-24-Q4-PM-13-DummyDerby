@@ -9,7 +9,6 @@ public class Player : MonoBehaviour
     public ControlType controlType = ControlType.HumanInput;
 
     public float BestLapTime {  get; private set; } = Mathf.Infinity;
-
     public float LastLapTime { get; private set; } = 0;
     public float CurrentLapTime { get; private set; } = 0;
     public int CurrentLap {  get; private set; } = 0;
@@ -22,12 +21,12 @@ public class Player : MonoBehaviour
     private int checkpointLayer;
     private CarController carController;
 
-    void Awake()
+    void Awake()  
     {
-        checkpointsParent = GameObject.Find("Checkpoints").transform;
-        checkpointCount = checkpointsParent.childCount;
-        checkpointLayer = LayerMask.NameToLayer("Checkpoint");
-        carController = GetComponent<CarController>();
+       checkpointsParent = GameObject.Find("Checkpoints").transform;
+       checkpointCount = checkpointsParent.childCount;
+       checkpointLayer = LayerMask.NameToLayer("Checkpoint");
+       carController = GetComponent<CarController>();
     }
 
     void StartLap()
@@ -39,6 +38,7 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        CurrentLapTime = lapTimer > 0 ? Time.deltaTime - lapTimer : 0; 
         if  (controlType == ControlType.HumanInput)
         {
             carController.Steer = GameManager.Instance.InputController.SteerInput;
