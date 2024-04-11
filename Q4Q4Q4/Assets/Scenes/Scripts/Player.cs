@@ -21,6 +21,9 @@ public class Player : MonoBehaviour
     private int checkpointLayer;
     private CarController carController;
 
+    public GameObject Racecar;
+
+
     void Awake()  
     {
        checkpointsParent = GameObject.Find("Checkpoints").transform;
@@ -78,6 +81,12 @@ public class Player : MonoBehaviour
         {
             carController.Steer = GameManager.Instance.InputController.SteerInput;
             carController.Throttle = GameManager.Instance.InputController.ThrottleInput;
+        }
+
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            Racecar.transform.position = checkpointsParent.transform.position;
+            Debug.Log("Test..");
         }
 
     }

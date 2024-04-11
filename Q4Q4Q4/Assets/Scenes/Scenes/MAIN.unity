@@ -1040,6 +1040,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8391222552659086748, guid: 2ed377a4c00a8774283b07a57a9663cf, type: 3}
+      propertyPath: m_TagString
+      value: Teleport
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 2ed377a4c00a8774283b07a57a9663cf, type: 3}
       propertyPath: m_Name
       value: TutorialTrack
@@ -1070,6 +1074,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controlType: 0
+  Racecar: {fileID: 805159938}
 --- !u!1 &828032825
 GameObject:
   m_ObjectHideFlags: 0
@@ -2007,6 +2012,26 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 741172043, guid: 39da9d16f446fce41a53a52224b18a97, type: 3}
+      propertyPath: m_ForwardFriction.m_ExtremumSlip
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 805159941, guid: 39da9d16f446fce41a53a52224b18a97, type: 3}
+      propertyPath: maxSteer
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1212877970, guid: 39da9d16f446fce41a53a52224b18a97, type: 3}
+      propertyPath: m_ForwardFriction.m_ExtremumSlip
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1412302272, guid: 39da9d16f446fce41a53a52224b18a97, type: 3}
+      propertyPath: m_ForwardFriction.m_ExtremumSlip
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1831954179, guid: 39da9d16f446fce41a53a52224b18a97, type: 3}
+      propertyPath: m_ForwardFriction.m_ExtremumSlip
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 7125581962939737483, guid: 39da9d16f446fce41a53a52224b18a97, type: 3}
       propertyPath: m_Name
       value: MainCar
