@@ -11,4 +11,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Folders/Scenes/Tutuorial.unity
     guid: 839413b63edaeb34e81351ffa0188a8d
+  - enabled: 1
+    path: Assets/Folders/Scenes/MainTrack.unity
+    guid: 93564f4b98848aa429dcb84581cab497
+  - enabled: 1
+    path: Assets/Folders/Scenes/Credit.unity
+    guid: 722223cf92052f94ea73e8710a714d09
   m_configObjects: {}
