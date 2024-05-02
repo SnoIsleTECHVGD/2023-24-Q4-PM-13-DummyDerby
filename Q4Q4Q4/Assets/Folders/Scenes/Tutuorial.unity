@@ -322,45 +322,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 38411850}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &79607015 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1536426704, guid: 39da9d16f446fce41a53a52224b18a97, type: 3}
-  m_PrefabInstance: {fileID: 7935992196371897563}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &88455608 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 5ce08fdfe51685240a92cb912b938557, type: 3}
   m_PrefabInstance: {fileID: 1767880230}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &88455609
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 88455608}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 82299eb79588c87489da59d482ea25a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  centerOfMass: {fileID: 617960698}
-  motorTorque: 1000
-  maxSteer: 15
---- !u!114 &88455610
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 88455608}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f434223ed2b0fc4ca6bdbd7a0b37c7e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  controlType: 0
-  Racecar: {fileID: 88455608}
 --- !u!54 &88455611
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -376,13 +342,28 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 3
+  m_CollisionDetection: 1
 --- !u!4 &88455614 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 5ce08fdfe51685240a92cb912b938557, type: 3}
   m_PrefabInstance: {fileID: 1767880230}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &88455617
+--- !u!114 &88455621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 88455608}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b04b2b297b0fb146821d008024dc87c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  centerOfMass: {fileID: 617960698}
+  motorTorque: 1000
+  maxSteer: 15
+--- !u!114 &88455622
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -391,19 +372,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 88455608}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9060b9a455c68b942949462cd266a9ae, type: 3}
+  m_Script: {fileID: 11500000, guid: 43f8450896ece5741ac169b6615805b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waypointContainer: {fileID: 1071385977}
-  waypoints: []
-  currentWaypoint: 0
-  waypointRange: 21
-  gasDampen: 0
-  isInsideBraking: 0
-  maximumAngle: 45
-  maximumSpeed: 120
-  turningConstant: 0.02
---- !u!114 &88455618
+  controlType: 0
+  Racecar: {fileID: 88455608}
+  targetmoveSpeed: 0
+--- !u!114 &88455623
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -412,86 +387,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 88455608}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5da569fc0d6e59c4d97ab4d2afd5ee5c, type: 3}
+  m_Script: {fileID: 11500000, guid: 82299eb79588c87489da59d482ea25a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  colliders:
-    FRWheel: {fileID: 2005583336}
-    FLWheel: {fileID: 515612502}
-    RRWheel: {fileID: 1495835994}
-    RLWheel: {fileID: 2146746346}
-  wheelMeshes:
-    FRWheel: {fileID: 1114749334}
-    FLWheel: {fileID: 1455802255}
-    RRWheel: {fileID: 541679094}
-    RLWheel: {fileID: 1746310384}
-  wheelParticles:
-    FRWheel: {fileID: 0}
-    FLWheel: {fileID: 0}
-    RRWheel: {fileID: 0}
-    RLWheel: {fileID: 0}
-    FRWheelTrail: {fileID: 0}
-    FLWheelTrail: {fileID: 0}
-    RRWheelTrail: {fileID: 0}
-    RLWheelTrail: {fileID: 0}
-  gasInput: 0
-  smokePrefab: {fileID: 336881577860626725, guid: d7586d11fcdec824f9c7eb949141e013, type: 3}
-  motorPower: 80
-  brakePower: 50000
-  slipAngle: 0
-  speed: 0
-  maxSpeed: 50
-  maxSteering: 70
-  isEngineRunning: 0
-  RPM: 0
-  redLine: 6500
-  idleRPM: 800
-  rpmText: {fileID: 0}
-  gearText: {fileID: 0}
-  rpmNeedle: {fileID: 0}
-  minNeedleRotation: 30
-  maxNeedleRotation: -200
-  currentGear: 0
-  gearRatios:
-  - 3
-  - 2.5
-  - 2
-  - 1.5
-  - 1
-  - 0.8
-  differentialRatio: 4
-  hpToRPMCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 1
-      value: 0.978775
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  increaseGearRPM: 5500
-  decreaseGearRPM: 3300
-  changeGearTime: 0.5
-  tireTrail: {fileID: 544749466699133553, guid: db8be45d1916f5b45bf088f2af263fcd, type: 3}
-  brakeMaterial: {fileID: 2100000, guid: 9a63c08912b0d5f4e83e4debd9b0cc91, type: 2}
-  brakingColor: {r: 0.9811321, g: 0.1342115, b: 0.1342115, a: 0}
-  brakeColorIntensity: 2
-  COM: {fileID: 617960698}
+  centerOfMass: {fileID: 617960698}
+  motorTorque: 1000
+  maxSteer: 15
 --- !u!4 &116006598 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: dd85b75dbba562d42a4b9d5d140ed989, type: 3}
@@ -847,11 +748,6 @@ MonoBehaviour:
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: dd85b75dbba562d42a4b9d5d140ed989, type: 3}
   m_PrefabInstance: {fileID: 1340836717}
-  m_PrefabAsset: {fileID: 0}
---- !u!146 &232199232 stripped
-WheelCollider:
-  m_CorrespondingSourceObject: {fileID: 1831954179, guid: 39da9d16f446fce41a53a52224b18a97, type: 3}
-  m_PrefabInstance: {fileID: 7935992196371897563}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &270845709
 GameObject:
@@ -1543,11 +1439,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.3243484, y: 0.72969335, z: 3.8936386}
   m_Center: {x: 0.02537918, y: 0.061838955, z: -0.066036224}
---- !u!1 &446765611 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7125581961609520574, guid: 39da9d16f446fce41a53a52224b18a97, type: 3}
-  m_PrefabInstance: {fileID: 7935992196371897563}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &466382768
 GameObject:
   m_ObjectHideFlags: 0
@@ -1803,11 +1694,6 @@ WheelCollider:
     m_AsymptoteValue: 1.2
     m_Stiffness: 1
   m_Enabled: 1
---- !u!1 &541679094 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: dd85b75dbba562d42a4b9d5d140ed989, type: 3}
-  m_PrefabInstance: {fileID: 1335127121}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &548884418
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2034,6 +1920,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controlType: 0
   Racecar: {fileID: 582369599}
+  targetmoveSpeed: 0
 --- !u!114 &582369601
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2069,11 +1956,6 @@ Rigidbody:
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 5ce08fdfe51685240a92cb912b938557, type: 3}
   m_PrefabInstance: {fileID: 726859495}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &606739754 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7125581962735054246, guid: 39da9d16f446fce41a53a52224b18a97, type: 3}
-  m_PrefabInstance: {fileID: 7935992196371897563}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &617960697
 GameObject:
@@ -2573,7 +2455,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 5ce08fdfe51685240a92cb912b938557, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects:
@@ -3051,95 +2933,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controlType: 0
   Racecar: {fileID: 805159938}
---- !u!114 &805159949
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 805159938}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5da569fc0d6e59c4d97ab4d2afd5ee5c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  colliders:
-    FRWheel: {fileID: 1855359393}
-    FLWheel: {fileID: 232199232}
-    RRWheel: {fileID: 1143910202}
-    RLWheel: {fileID: 855940273}
-  wheelMeshes:
-    FRWheel: {fileID: 1601225296}
-    FLWheel: {fileID: 446765611}
-    RRWheel: {fileID: 966434894}
-    RLWheel: {fileID: 606739754}
-  wheelParticles:
-    FRWheel: {fileID: 0}
-    FLWheel: {fileID: 0}
-    RRWheel: {fileID: 0}
-    RLWheel: {fileID: 0}
-    FRWheelTrail: {fileID: 0}
-    FLWheelTrail: {fileID: 0}
-    RRWheelTrail: {fileID: 0}
-    RLWheelTrail: {fileID: 0}
-  gasInput: 0
-  smokePrefab: {fileID: 336881577860626725, guid: d7586d11fcdec824f9c7eb949141e013, type: 3}
-  motorPower: 80
-  brakePower: 50000
-  slipAngle: 0
-  speed: 0
-  maxSpeed: 50
-  maxSteering: 70
-  isEngineRunning: 0
-  RPM: 0
-  redLine: 6500
-  idleRPM: 800
-  rpmText: {fileID: 0}
-  gearText: {fileID: 0}
-  rpmNeedle: {fileID: 0}
-  minNeedleRotation: 0
-  maxNeedleRotation: 0
-  currentGear: 0
-  gearRatios:
-  - 3
-  - 2.5
-  - 2
-  - 1.5
-  - 1
-  - 0.8
-  differentialRatio: 4
-  hpToRPMCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 1
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  increaseGearRPM: 5500
-  decreaseGearRPM: 3300
-  changeGearTime: 0.5
-  tireTrail: {fileID: 544749466699133553, guid: db8be45d1916f5b45bf088f2af263fcd, type: 3}
-  brakeMaterial: {fileID: 2100000, guid: 9a63c08912b0d5f4e83e4debd9b0cc91, type: 2}
-  brakingColor: {r: 1, g: 0, b: 0, a: 0}
-  brakeColorIntensity: 2
-  COM: {fileID: 79607015}
+  targetmoveSpeed: 0
 --- !u!1 &831854311
 GameObject:
   m_ObjectHideFlags: 0
@@ -3171,11 +2965,6 @@ Transform:
   m_Father: {fileID: 582369605}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!146 &855940273 stripped
-WheelCollider:
-  m_CorrespondingSourceObject: {fileID: 1212877970, guid: 39da9d16f446fce41a53a52224b18a97, type: 3}
-  m_PrefabInstance: {fileID: 7935992196371897563}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &886874242
 GameObject:
   m_ObjectHideFlags: 0
@@ -3259,6 +3048,103 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 886874242}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &888824163
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 888824164}
+  - component: {fileID: 888824167}
+  - component: {fileID: 888824166}
+  - component: {fileID: 888824165}
+  m_Layer: 0
+  m_Name: Sphere (21)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &888824164
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 888824163}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -77.67059, y: -10.544046, z: 127.018715}
+  m_LocalScale: {x: 2.1932, y: 2.1932, z: 2.1932}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1071385978}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &888824165
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 888824163}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &888824166
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 888824163}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: d311393bf4505fd4b853e83fc087c831, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &888824167
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 888824163}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &905412143
 GameObject:
   m_ObjectHideFlags: 0
@@ -3415,7 +3301,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 946232304}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -94.45059, y: -26.614046, z: 7.908718}
+  m_LocalPosition: {x: -114.96, y: -26.614046, z: 7.908718}
   m_LocalScale: {x: 2.1932, y: 2.1932, z: 2.1932}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3485,11 +3371,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 946232304}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &966434894 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7125581963297126779, guid: 39da9d16f446fce41a53a52224b18a97, type: 3}
-  m_PrefabInstance: {fileID: 7935992196371897563}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1012373156
 GameObject:
   m_ObjectHideFlags: 0
@@ -3828,6 +3709,7 @@ Transform:
   - {fileID: 661543992}
   - {fileID: 665434280}
   - {fileID: 736396124}
+  - {fileID: 888824164}
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3862,16 +3744,6 @@ Transform:
   m_Father: {fileID: 1968537675}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1114749334 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: dd85b75dbba562d42a4b9d5d140ed989, type: 3}
-  m_PrefabInstance: {fileID: 2040972891}
-  m_PrefabAsset: {fileID: 0}
---- !u!146 &1143910202 stripped
-WheelCollider:
-  m_CorrespondingSourceObject: {fileID: 1412302272, guid: 39da9d16f446fce41a53a52224b18a97, type: 3}
-  m_PrefabInstance: {fileID: 7935992196371897563}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1145606752
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4644,11 +4516,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: dd85b75dbba562d42a4b9d5d140ed989, type: 3}
   m_PrefabInstance: {fileID: 1459448048}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1455802255 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: dd85b75dbba562d42a4b9d5d140ed989, type: 3}
-  m_PrefabInstance: {fileID: 579892277}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1459448048
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5386,11 +5253,6 @@ PrefabInstance:
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: dd85b75dbba562d42a4b9d5d140ed989, type: 3}
---- !u!1 &1601225296 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7125581961932182363, guid: 39da9d16f446fce41a53a52224b18a97, type: 3}
-  m_PrefabInstance: {fileID: 7935992196371897563}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1656509077
 GameObject:
   m_ObjectHideFlags: 0
@@ -5567,7 +5429,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 5ce08fdfe51685240a92cb912b938557, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects:
@@ -5581,11 +5443,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1780329438}
   m_SourcePrefab: {fileID: 100100000, guid: 5ce08fdfe51685240a92cb912b938557, type: 3}
---- !u!1 &1746310384 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: dd85b75dbba562d42a4b9d5d140ed989, type: 3}
-  m_PrefabInstance: {fileID: 1327230559}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1767880230
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6014,6 +5871,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controlType: 1
   Racecar: {fileID: 1826329798}
+  targetmoveSpeed: 0
 --- !u!114 &1826329800
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6049,11 +5907,6 @@ Rigidbody:
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 5ce08fdfe51685240a92cb912b938557, type: 3}
   m_PrefabInstance: {fileID: 1940502077}
-  m_PrefabAsset: {fileID: 0}
---- !u!146 &1855359393 stripped
-WheelCollider:
-  m_CorrespondingSourceObject: {fileID: 741172043, guid: 39da9d16f446fce41a53a52224b18a97, type: 3}
-  m_PrefabInstance: {fileID: 7935992196371897563}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1861274280
 GameObject:
@@ -6226,7 +6079,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 5ce08fdfe51685240a92cb912b938557, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects:
@@ -6377,6 +6230,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controlType: 0
   Racecar: {fileID: 1968537669}
+  targetmoveSpeed: 0
 --- !u!114 &1968537671
 MonoBehaviour:
   m_ObjectHideFlags: 0

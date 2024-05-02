@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Threading;
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class Player2 : MonoBehaviour
 {
     public enum ControlType { HumanInput, AI }
     public ControlType controlType = ControlType.HumanInput;
@@ -94,8 +94,8 @@ public class Player : MonoBehaviour
         CurrentLapTime = lapTimerTimestamp > 0 ? Time.time - lapTimerTimestamp : 0; 
         if  (controlType == ControlType.HumanInput)
         {
-            carController.Steer = GameManager.Instance.InputController.SteerInput;
-            carController.Throttle = GameManager.Instance.InputController.ThrottleInput;
+            carController.Steer = GameManager.Instance.InputController2.SteerInput2;
+            carController.Throttle = GameManager.Instance.InputController2.ThrottleInput2;
         }
         if (controlType == ControlType.AI)
         {
