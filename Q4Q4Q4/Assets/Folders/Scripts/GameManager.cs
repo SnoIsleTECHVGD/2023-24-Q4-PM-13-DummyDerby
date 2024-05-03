@@ -14,7 +14,7 @@ public class GameManager : MonoBehaviour
     void Awake()
     {
         Instance = this;
-        Instance2 = this;
+      //Instance2 = this;
         InputController = GetComponentInChildren<InputController>();
         InputController2 = GetComponentInChildren<InputController2>();
     }
