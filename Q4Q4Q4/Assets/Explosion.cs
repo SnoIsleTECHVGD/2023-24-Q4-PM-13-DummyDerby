@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 public class Explosion : MonoBehaviour
 {
@@ -7,6 +9,11 @@ public class Explosion : MonoBehaviour
     [SerializeField] private GameObject _particles;
 
     public bool exploaded = false;
+    public bool player1IsClose;
+    public bool player2IsClose;
+
+    public GameObject Wheels1;
+    public GameObject Wheels2;
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -24,18 +31,48 @@ public class Explosion : MonoBehaviour
 
             Instantiate(_particles, transform.position, Quaternion.identity);
 
-            //Destroy(gameObject);
+            if (collision.gameObject.tag == "Player")
+            {
+                player1IsClose = true;
+            }
+
+            if (collision.gameObject.tag == "Player2")
+            {
+                player2IsClose = true;
+            }
+            
 
             exploaded = true;
-           
+          // Destroy(gameObject);
         }
     }
-    private void OnTriggerEnter(Collider other)
-    {
-        if (exploaded == true )
-        {
 
-            Debug.Log("playertouch");
+
+    private void Update()
+    {
+      if (exploaded == true && player1IsClose)
+        {
+            Wheels1.SetActive(false);
+            StartCoroutine(WheelPop());
+        }  
+      
+      if (exploaded == true && player2IsClose)
+        {
+            Wheels2.SetActive(false);
+            StartCoroutine(WheelPop());
+
         }
+    }
+
+    IEnumerator WheelPop()
+    {
+        
+        yield return new WaitForSeconds(5);
+
+        Wheels1.SetActive(true);
+        player1IsClose = false;
+        Wheels2.SetActive(true);
+        player2IsClose = false;
+       // Debug.Log("Finished Coroutine at timestamp : " + Time.time);
     }
 }

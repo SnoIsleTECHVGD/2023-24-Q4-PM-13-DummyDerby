@@ -14,16 +14,16 @@ public class Player : MonoBehaviour
     public int CurrentLap {  get; private set; } = 0;
 
     private float lapTimerTimestamp;
-    private int lastCheckpointPassed = 0;
+    public int lastCheckpointPassed = 0;
 
     private Transform checkpointsParent;
-    private int checkpointCount;
+    public int checkpointCount;
     private int checkpointLayer;
     private CarController carController;
 
     public GameObject Racecar;
 
-    public float targetmoveSpeed;
+   // public float targetmoveSpeed;
 
 
     //test
@@ -100,14 +100,7 @@ public class Player : MonoBehaviour
         if (controlType == ControlType.AI)
         {
 
-            //transform.position = Vector3.MoveTowards(transform.position, waypoints[currentWaypoint].position, targetmoveSpeed * Time.deltaTime);
-
-            // if (Vector3.Distance(waypoints[currentWaypoint].position, transform.position) < waypointRange)
-            // {
-            //     currentWaypoint++;
-            //     if (currentWaypoint == waypoints.Count) currentWaypoint = 0;
-            // }
-            //Debug.DrawRay(transform.position, waypoints[currentWaypoint].position - transform.position, Color.yellow);
+          
         }
 
         if (Input.GetKeyDown(KeyCode.Q))

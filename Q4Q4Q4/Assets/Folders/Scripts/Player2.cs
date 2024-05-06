@@ -14,10 +14,10 @@ public class Player2 : MonoBehaviour
     public int CurrentLap {  get; private set; } = 0;
 
     private float lapTimerTimestamp;
-    private int lastCheckpointPassed = 0;
+    public int lastCheckpointPassed = 0;
 
     private Transform checkpointsParent;
-    private int checkpointCount;
+    public int checkpointCount;
     private int checkpointLayer;
     private CarController carController;
 
