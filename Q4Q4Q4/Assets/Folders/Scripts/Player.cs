@@ -22,6 +22,7 @@ public class Player : MonoBehaviour
     private CarController carController;
 
     public GameObject Racecar;
+    public GameObject Player1Win;
 
    // public float targetmoveSpeed;
 
@@ -107,6 +108,11 @@ public class Player : MonoBehaviour
         {
             Racecar.transform.position = checkpointsParent.transform.position;
             Debug.Log("Test..");
+        }
+        
+        if(CurrentLap == 3)
+        {
+            Player1Win.SetActive(true);
         }
 
     }

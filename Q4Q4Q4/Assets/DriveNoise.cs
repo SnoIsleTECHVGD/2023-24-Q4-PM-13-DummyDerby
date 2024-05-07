@@ -24,5 +24,16 @@ public class DriveNoise : MonoBehaviour
         {
             audioSource.Stop();
         }
+
+        if (Input.GetKeyDown(KeyCode.UpArrow))
+        {
+
+            audioSource.Play();
+
+        }
+        if (Input.GetKeyUp(KeyCode.UpArrow))
+        {
+            audioSource.Stop();
+        }
     }
 }

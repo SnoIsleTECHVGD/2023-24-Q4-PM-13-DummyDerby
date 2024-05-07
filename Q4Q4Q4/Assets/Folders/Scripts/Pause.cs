@@ -10,6 +10,10 @@ public class Pause : MonoBehaviour
     [SerializeField] GameObject pauseMenu;
 
 
+    private void Start()
+    {
+        Time.timeScale = 1.0f;
+    }
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))

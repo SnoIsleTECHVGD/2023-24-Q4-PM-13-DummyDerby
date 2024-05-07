@@ -23,7 +23,8 @@ public class Player2 : MonoBehaviour
 
     public GameObject Racecar;
 
-    public float targetmoveSpeed;
+    public GameObject Player2Win;
+
 
 
     //test
@@ -116,5 +117,9 @@ public class Player2 : MonoBehaviour
             Debug.Log("Test..");
         }
 
+        if (CurrentLap == 3)
+        {
+            Player2Win.SetActive(true);
+        }
     }
 }
