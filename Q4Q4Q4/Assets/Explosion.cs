@@ -14,7 +14,7 @@ public class Explosion : MonoBehaviour
 
     public GameObject Wheels1;
     public GameObject Wheels2;
-    public AudioSource audioSource;
+    public GameObject audioSource;
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.relativeVelocity.magnitude >= _triggerForce)
@@ -48,7 +48,7 @@ public class Explosion : MonoBehaviour
     }
     private void Start()
     {
-        audioSource = GetComponent<AudioSource>();
+        //audioSource = GetComponent<AudioSource>();
 
     }
 
@@ -72,7 +72,8 @@ public class Explosion : MonoBehaviour
         }
       if (exploaded == true)
         {
-            audioSource.Play();
+            audioSource.SetActive(true);
+           // audioSource.Play();
          //   audioSource.time = 2.0f;
           //  Debug.Log("boom");
         }
